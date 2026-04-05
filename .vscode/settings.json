@@ -2,5 +2,15 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "cSpell.words": ["eslintcache", "ianvs", "prettiercache"]
+  "cSpell.words": ["eslintcache", "ianvs", "nums", "oklch", "prettiercache"],
+  "editor.codeActionsOnSave": { "source.organizeImports": "always" },
+  "editor.formatOnSave": true,
+  "files.autoSave": "onFocusChange",
+  "tailwindCSS.classFunctions": ["cva", "cn", "clsx", "classNames"],
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["clsx\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["\\b\\w*([cC]lass)([nN]ame)?(s|es|[lL]ist)?\\b", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ]
 }
