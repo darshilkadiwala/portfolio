@@ -8,12 +8,14 @@ export const personal = {
   shortBio:
     'Full-stack engineer with a focus on crafting fast, accessible, and well-designed products. I care deeply about the details - from architecture to pixel.',
   location: 'India 🇮🇳',
-  email: 'hello@darshilkadiwala.dev',
+  email: 'hello@darshil.dev',
   calLink: 'https://cal.com/darshil',
   photo: '/me.png',
   github: 'https://github.com/darshilkadiwala',
+  githubRepo: 'https://github.com/darshilkadiwala/portfolio',
   linkedin: 'https://linkedin.com/in/darshilkadiwala',
-  twitter: 'https://twitter.com/darshilkadiwala',
+  twitter: 'https://twitter.com/imthedarshil',
+  calendly: 'https://calendly.com/darshil',
   github_username: 'darshilkadiwala',
   resumeUrl: '/resume.pdf',
   resumeLastUpdated: 'April 2026',
@@ -30,8 +32,10 @@ export const personal = {
   calLink: string;
   photo: string;
   github: string;
+  githubRepo: string;
   linkedin: string;
   twitter: string;
+  calendly: string;
   github_username: string;
   resumeUrl: string;
   resumeLastUpdated: string;
@@ -217,8 +221,13 @@ export const siteConfig = {
     heroHeading: "Let's build something.",
     heroSubheading:
       "Open to full-time roles, contracts, and interesting collaborations. If you have something in mind, let's talk.",
-    emailCopiedToast: 'Email copied to clipboard!',
-    copiedButton: 'Copied!',
+    emailCopiedToast: 'Email copied to your clipboard!',
+    copyEmail: 'Copy email',
+    dropMeAMessage: 'Prefer async? Drop me a message.',
+    bookACall: 'Book a 30-min intro call.',
+    emailLabel: 'Email',
+    scheduleCallLabel: 'Schedule a call',
+    followAlongLabel: 'Follow along',
   },
   footer: {
     navigationHeading: 'Navigation',
