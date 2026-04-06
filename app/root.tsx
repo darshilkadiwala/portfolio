@@ -1,6 +1,9 @@
 import type { ReactNode } from 'react';
 
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router';
+import { Toaster } from 'sonner';
+
+import { TooltipProvider } from '@/components/ui/tooltip';
 
 import type { Route } from './+types/root';
 
@@ -8,7 +11,8 @@ import './app.css';
 
 export function Layout({ children }: { children: ReactNode }) {
   return (
-    <html lang='en'>
+    // eslint-disable-next-line better-tailwindcss/no-unknown-classes
+    <html lang='en' className='dark'>
       <head>
         <meta charSet='utf-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -16,7 +20,10 @@ export function Layout({ children }: { children: ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <TooltipProvider>
+          {children}
+          <Toaster position='bottom-right' richColors theme='dark' />
+        </TooltipProvider>
         <ScrollRestoration />
         <Scripts />
       </body>
