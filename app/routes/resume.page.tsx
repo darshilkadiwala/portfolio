@@ -5,7 +5,6 @@ import { Link } from 'react-router';
 
 import { GitHubActivity } from '@/components/github-activity';
 import { GitHubIcon, LinkedinIcon, TwitterIcon } from '@/components/icons';
-import { SiteHeader } from '@/components/site-header';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge/badge';
 import { Button } from '@/components/ui/button/button';
@@ -29,9 +28,7 @@ export function meta(_args: Route.MetaArgs): Route.MetaDescriptors {
 
 export default function ResumePage() {
   return (
-    <div className='bg-background min-h-screen'>
-      <SiteHeader />
-
+    <div className='bg-background min-h-hero-fold'>
       <main className='mx-auto max-w-5xl px-6 py-12'>
         <div className='flex flex-col gap-12 lg:flex-row lg:gap-16'>
           {/* ── LEFT STICKY SIDEBAR ─────────────────────────────────── */}

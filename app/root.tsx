@@ -4,6 +4,7 @@ import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration }
 import { Toaster } from 'sonner';
 
 import { SiteFooter } from '@/components/site-footer';
+import { SiteHeader } from '@/components/site-header';
 import { TooltipProvider } from '@/components/ui/tooltip';
 
 import type { Route } from './+types/root';
@@ -22,6 +23,7 @@ export function Layout({ children }: { children: ReactNode }) {
       </head>
       <body>
         <TooltipProvider>
+          <SiteHeader />
           {children}
           <Toaster position='bottom-right' richColors theme='dark' />
           <SiteFooter />

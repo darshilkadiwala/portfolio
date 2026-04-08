@@ -7,7 +7,6 @@ import { Link } from 'react-router';
 import { toast } from 'sonner';
 
 import { GitHubIcon, LinkedinIcon } from '@/components/icons';
-import { SiteHeader } from '@/components/site-header';
 import { Separator } from '@/components/ui/separator';
 import { personal, siteConfig } from '@/data/portfolio';
 import { cn } from '@/lib/utils';
@@ -27,9 +26,7 @@ export function meta(): Route.MetaDescriptors {
 
 export default function ContactPage() {
   return (
-    <div className='bg-background flex min-h-screen flex-col'>
-      <SiteHeader />
-
+    <div className='bg-background min-h-hero-fold flex flex-col'>
       <main className='flex flex-1 flex-col'>
         {/* ── HERO CTA ──────────────────────────────────────────────────── */}
         <section
