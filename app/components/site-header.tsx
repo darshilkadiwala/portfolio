@@ -20,9 +20,18 @@ export function SiteHeader() {
 
         {/* Nav */}
         <nav aria-label='Main navigation'>
-          <ul className='flex items-center gap-1'>
+          <ul className='flex flex-wrap items-center gap-1'>
             {navLinks.map(({ label, href }) => {
-              const isActive = location.pathname === href;
+              const { pathname, hash } = location;
+              let isActive = false;
+              if (href === '/') {
+                isActive = pathname === '/' && !hash;
+              } else if (href.startsWith('/#')) {
+                const targetHash = href.replace('/', '');
+                isActive = pathname === '/' && hash === targetHash;
+              } else {
+                isActive = pathname === href;
+              }
               return (
                 <li key={href}>
                   <Link

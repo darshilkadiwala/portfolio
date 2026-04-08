@@ -47,6 +47,9 @@ export const personal = {
 
 export const navLinks = [
   { label: 'Home', href: '/' },
+  { label: 'Projects', href: '/#projects' },
+  { label: 'Experience', href: '/#experience' },
+  { label: 'About', href: '/#about' },
   { label: 'Resume', href: '/resume' },
   { label: 'Contact', href: '/contact' },
 ] as const;
@@ -197,12 +200,131 @@ export const footerLinks = [
   { label: 'LinkedIn', href: personal.linkedin },
 ] as const;
 
+// ─── Projects ────────────────────────────────────────────────────────────────
+
+export interface ProjectEntry {
+  id: string;
+  version: string;
+  name: string;
+  description: string;
+  linkLabel: string;
+  href: string;
+}
+
+export const projects: ProjectEntry[] = [
+  {
+    id: 'omni-crm',
+    version: 'V.01.2',
+    name: 'Omni-Channel CRM',
+    description:
+      'Enterprise-scale customer relationship management system built with Next.js and PostgreSQL. Features real-time sync and predictive analytics.',
+    linkLabel: 'VIEW_CASE_STUDY',
+    href: '#',
+  },
+  {
+    id: 'logic-engine',
+    version: 'V.04.5',
+    name: 'Logic_Engine v4',
+    description:
+      'A proprietary state management library designed for micro-frontend architectures. Zero dependencies, maximum throughput.',
+    linkLabel: 'VIEW_DOCS',
+    href: '#',
+  },
+  {
+    id: 'nova-pay',
+    version: 'V.02.0',
+    name: 'Nova_Pay Mobile',
+    description:
+      'Fintech application interface focused on rapid transactions and biometric security. Optimized for low-latency networks.',
+    linkLabel: 'VIEW_FLOW',
+    href: '#',
+  },
+  {
+    id: 'structure-ui',
+    version: 'V.09.9',
+    name: 'Structure_UI Kit',
+    description:
+      'A headless UI component library built for rapid prototyping of high-fidelity architectural interfaces.',
+    linkLabel: 'VIEW_SOURCE',
+    href: '#',
+  },
+];
+
+// ─── Home Page Skill Categories ───────────────────────────────────────────────
+
+export interface HomeSkillCategory {
+  id: string;
+  icon: 'monitor' | 'database' | 'cloud' | 'layout-grid';
+  label: string;
+}
+
+export const homeSkillCategories: HomeSkillCategory[] = [
+  { id: 'frontend', icon: 'monitor', label: 'FRONTEND' },
+  { id: 'backend', icon: 'database', label: 'BACKEND' },
+  { id: 'devops', icon: 'cloud', label: 'DEVOPS' },
+  { id: 'systems', icon: 'layout-grid', label: 'SYSTEM_DESIGN' },
+];
+
+// ─── Home Mission (terminal content) ──────────────────────────────────────────
+
+export const homeMission = {
+  quote:
+    '"Code is not just logic; it is the infrastructure of human experience. I build with structural integrity and aesthetic precision."',
+  location: 'Mumbai, India (UTC+5:30)',
+  currentSprint: 'Open for collaboration',
+  availability: 'High',
+} as const;
+
 // ─── UI Strings & Configuration ──────────────────────────────────────────────
 
 export const siteConfig = {
   home: {
     viewResume: 'View Resume',
     getInTouch: 'Get in touch',
+    // Hero
+    availableBadge: 'AVAILABLE FOR HIRE',
+    rolePrefix: '/',
+    techStack: ['TYPESCRIPT', 'REACT.JS', 'NODE.JS', 'POSTGRESQL', 'DOCKER'],
+    heroBio:
+      'Building resilient digital infrastructure through intentional design and structural code. Specializing in high-performance web applications and system logic.',
+    // Scroll
+    scrollLabel: 'SCROLL_FOR_DATA',
+    // Terminal
+    terminalTitle: 'DARSHIL_SHELL — 80x24',
+    terminalPrompt: 'guest@portfolio:',
+    terminalHome: '~',
+    terminalCmd1: 'npm run build:future',
+    terminalBuild: '> Building project modules...',
+    terminalLogs: [
+      '[OK] Initialized architecture system',
+      '[OK] Compiled reactive interfaces',
+      '[OK] Optimized database indexing',
+      '[OK] Hardened security protocols',
+    ],
+    terminalCmd2: 'cat mission_statement.md',
+    terminalDeployLabel: '# Active Deployment Details:',
+    // About
+    aboutSectionLabel: '01 /\nSTUDIO_LOGIC',
+    aboutBio:
+      'I am an engineer focused on the intersection of performance and poetry. My approach is defined by the removal of the unnecessary to highlight the essential.',
+    philosophyLabel: 'PHILOSOPHY',
+    philosophyText:
+      'I believe in the "Brutalist Blueprint"—where the function of a component determines its form. No decorative pixels, no hidden bloat. Just pure, executable intent.',
+    methodologyLabel: 'METHODOLOGY',
+    methodologyText:
+      'Leveraging modern stack architectures to create seamless user journeys. My process starts with rigid data modeling and ends with fluid, responsive interfaces.',
+    // Experience
+    experienceSectionLabel: '02 /\nTECHNICAL_ROOTS',
+    capabilitiesLabel: 'CORE_CAPABILITIES',
+    historyLabel: 'HISTORY_LOGS',
+    // Projects
+    projectsSectionLabel: '03 /\nCONSTRUCTED_WORKS',
+    projectsCountLabel: 'COUNT: 04 ACTIVE PROJECTS',
+    // Contact CTA
+    contactSectionLabel: '04 /\nINITIATE_SESSION',
+    contactSubheading:
+      "Have a complex problem that requires a structural solution? Let's connect and build something resilient.",
+    contactCTA: 'OPEN_CHANNEL →',
   },
   resume: {
     downloadResume: 'Download Resume',
