@@ -7,8 +7,15 @@ import { footerLinks, personal, siteConfig } from '@/data/portfolio';
 
 export function SiteFooter() {
   return (
-    <footer aria-label='Site footer' className='bg-card/20 w-full py-24'>
-      <div className='mx-auto grid max-w-7xl grid-cols-1 gap-12 px-8 md:grid-cols-3'>
+    <footer aria-label='Site footer' className='bg-card/20 relative w-full overflow-hidden py-24'>
+      {/* Decorative watermark */}
+      <div className='absolute right-0 -bottom-4 z-0 opacity-[0.04] select-none md:-bottom-12.5' aria-hidden='true'>
+        <span className='text-fluid-watermark font-mono leading-none font-black tracking-tighter uppercase'>
+          {siteConfig.footer.watermark}
+        </span>
+      </div>
+
+      <div className='relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-12 px-8 md:grid-cols-3'>
         {/* Left: Branding */}
         <div className='space-y-4'>
           <Link
@@ -92,7 +99,7 @@ export function SiteFooter() {
       </div>
 
       {/* Bottom Micro-Bar */}
-      <div className='mx-auto mt-24 max-w-7xl px-8'>
+      <div className='relative z-10 mx-auto mt-24 max-w-7xl px-8'>
         <div className='border-border/50 flex flex-col items-center justify-between gap-4 border-t pt-8 md:flex-row'>
           <p className='text-muted-foreground text-[10px] tracking-[0.2em] uppercase'>
             &copy;{new Date().getFullYear()} {personal.name}. {siteConfig.footer.allRightsReserved}

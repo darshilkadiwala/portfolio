@@ -358,5 +358,6 @@ export const siteConfig = {
     handcraftedIn: 'Handcrafted in',
     allRightsReserved: 'All rights reserved.',
     viewSource: 'View source',
+    watermark: 'darshil.dev',
   },
 } as const;
