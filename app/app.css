@@ -3,6 +3,7 @@
 @import 'shadcn/tailwind.css';
 @import '@fontsource-variable/inter';
 @import '@fontsource-variable/space-grotesk';
+@import '@fontsource-variable/jetbrains-mono';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -13,8 +14,13 @@
   --blur-2xs: calc(var(--blur-xs) / 2);
 
   --font-heading: 'Space Grotesk Variable', sans-serif;
-  --font-mono: 'Space Grotesk Variable', monospace;
+  --font-mono: 'JetBrains Mono Variable', monospace;
   --font-sans: 'Inter Variable', sans-serif;
+
+  --text-fluid-hero: clamp(3rem, 8vw, 8rem);
+  --text-fluid-watermark: clamp(2rem, 16vw, 12.5rem);
+
+  --spacing-hero-fold: calc(100svh - 5rem);
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -173,11 +179,5 @@
   html {
     @apply font-sans;
     color-scheme: dark;
-  }
-}
-
-@layer utilities {
-  .bg-backdrop-frosted {
-    @apply backdrop-blur-2xs dark:bg-primary/5 bg-primary/40;
   }
 }
