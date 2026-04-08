@@ -284,6 +284,14 @@ export const siteConfig = {
     // Hero
     availableBadge: 'AVAILABLE FOR HIRE',
     rolePrefix: '/',
+    rolePhrases: [
+      'Full Stack Engineer',
+      'MERN Stack Developer',
+      'TypeScript Enthusiast',
+      'React Specialist',
+      'API Architect',
+      'Backend Architect',
+    ],
     techStack: ['TYPESCRIPT', 'REACT.JS', 'NODE.JS', 'POSTGRESQL', 'DOCKER'],
     heroBio:
       'Building resilient digital infrastructure through intentional design and structural code. Specializing in high-performance web applications and system logic.',

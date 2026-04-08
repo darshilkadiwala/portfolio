@@ -4,6 +4,8 @@ import { Link } from 'react-router';
 import { Badge } from '@/components/ui/badge/badge';
 import { Button } from '@/components/ui/button/button';
 import { personal, siteConfig } from '@/data/portfolio';
+import { TypewriterStatus, useRolesTypewriter } from '@/hooks/use-roles-typewriter';
+import { cn } from '@/lib/utils';
 
 export function HeroSection() {
   const cfg = siteConfig.home;
@@ -28,12 +30,7 @@ export function HeroSection() {
         {/* Role */}
         <div className='flex items-center gap-3'>
           <span className='text-muted-foreground font-mono text-xl font-light md:text-2xl'>{cfg.rolePrefix}</span>
-          <p className='text-primary font-mono text-xl tracking-tight md:text-2xl'>
-            {personal.title}
-            <span className='animate-ping' aria-hidden='true'>
-              |
-            </span>
-          </p>
+          <RoleTypewriter />
         </div>
 
         {/* Bio */}
@@ -84,5 +81,17 @@ export function HeroSection() {
         />
       </div>
     </section>
+  );
+}
+
+function RoleTypewriter() {
+  const { status, role } = useRolesTypewriter();
+  return (
+    <p className='text-primary font-mono text-xl tracking-tight md:text-2xl'>
+      {role}
+      <span className={cn(status === TypewriterStatus.DISPLAYED && 'animate-ping')} aria-hidden='true'>
+        |
+      </span>
+    </p>
   );
 }
