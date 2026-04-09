@@ -5,14 +5,17 @@ import { HeroSection } from '@/components/home/hero-section';
 import { ProjectsSection } from '@/components/home/projects-section';
 import { ScrollIndicator } from '@/components/home/scroll-indicator';
 import { TerminalSection } from '@/components/home/terminal-section';
-import { personal } from '@/data/portfolio';
+import { personal, siteConfig } from '@/data/portfolio';
 
 import type { Route } from './+types/home.page';
 
 // ─── Meta ────────────────────────────────────────────────────────────────────
 
 export function meta(): Route.MetaDescriptors {
-  return [{ title: `${personal.name} - ${personal.title}` }, { name: 'description', content: personal.shortBio }];
+  return [
+    { title: `${siteConfig.home.heroTitle} - ${siteConfig.home.rolePhrases.join(' | ')}` },
+    { name: 'description', content: personal.shortBio },
+  ];
 }
 
 // ─── Page ────────────────────────────────────────────────────────────────────

@@ -1,0 +1,438 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DARSHIL KADIWALA | THE_ARCHIVE_v1.0</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Space+Grotesk:wght@300..700&amp;display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet" />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'on-error-container': '#ffdad6',
+              'secondary-fixed-dim': '#acabab',
+              'on-tertiary-fixed-variant': '#e2e2e2',
+              'surface-bright': '#3a3939',
+              outline: '#919191',
+              'on-secondary-container': '#e4e2e2',
+              'on-background': '#e5e2e1',
+              secondary: '#c7c6c6',
+              'surface-container-highest': '#353534',
+              'on-tertiary-fixed': '#ffffff',
+              primary: '#ffffff',
+              'on-tertiary-container': '#000000',
+              surface: '#131313',
+              'surface-container-high': '#2a2a2a',
+              'on-surface-variant': '#c6c6c6',
+              'primary-container': '#d4d4d4',
+              'on-secondary-fixed': '#1b1c1c',
+              'inverse-surface': '#e5e2e1',
+              'surface-tint': '#c6c6c6',
+              'on-secondary': '#1b1c1c',
+              'on-primary-fixed': '#ffffff',
+              background: '#131313',
+              'tertiary-fixed-dim': '#474747',
+              'on-error': '#690005',
+              'inverse-primary': '#5d5f5f',
+              'on-primary-container': '#000000',
+              'error-container': '#93000a',
+              'surface-variant': '#353534',
+              'surface-container': '#201f1f',
+              'tertiary-container': '#919191',
+              'on-primary-fixed-variant': '#e2e2e2',
+              'outline-variant': '#474747',
+              'surface-dim': '#131313',
+              tertiary: '#e2e2e2',
+              'surface-container-low': '#1c1b1b',
+              'primary-fixed-dim': '#454747',
+              'secondary-fixed': '#c7c6c6',
+              'secondary-container': '#464747',
+              'on-tertiary': '#1b1b1b',
+              'tertiary-fixed': '#5e5e5e',
+              'surface-container-lowest': '#0e0e0e',
+              'inverse-on-surface': '#313030',
+              error: '#ffb4ab',
+              'on-primary': '#1a1c1c',
+              'on-surface': '#e5e2e1',
+              'on-secondary-fixed-variant': '#3b3b3b',
+              'primary-fixed': '#5d5f5f',
+            },
+            borderRadius: {
+              DEFAULT: '0px',
+              lg: '0px',
+              xl: '0px',
+              full: '0px',
+            },
+            fontFamily: {
+              headline: ['Newsreader'],
+              body: ['Space Grotesk'],
+              label: ['Space Grotesk'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #131313;
+        color: #e5e2e1;
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .rotate-270 {
+        transform: rotate(270deg);
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 200,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+      .serif-display {
+        font-family: 'Newsreader', serif;
+      }
+      .mono-metadata {
+        font-family: 'Space Grotesk', monospace;
+        letter-spacing: 0.05em;
+      }
+      .sharp-edge {
+        border-radius: 0px !important;
+      }
+      .pulse-green {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+        }
+        70% {
+          transform: scale(1);
+          box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+        }
+        100% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+        }
+      }
+    </style>
+  </head>
+  <body class="selection:bg-primary-container selection:text-on-primary-container antialiased">
+    <!-- Predicted SideNavBar Implementation -->
+    <aside
+      class="fixed top-0 left-0 z-[60] flex hidden h-screen w-64 flex-col border-r border-slate-800/20 bg-[#0A0A0A] px-6 py-12 md:flex">
+      <div class="mb-12">
+        <span class="font-serif text-2xl tracking-tighter text-slate-50 uppercase">ALEXIS VANE</span>
+        <p class="mt-1 font-mono text-[10px] tracking-widest text-slate-500 uppercase">TECHNICAL CURATOR</p>
+      </div>
+      <nav class="flex flex-1 flex-col justify-center space-y-8">
+        <div
+          class="group flex items-center gap-4 border-l-2 border-slate-50 pl-4 font-bold text-slate-50 transition-colors">
+          <span class="material-symbols-outlined text-sm">history_edu</span>
+          <span class="font-mono text-xs tracking-widest uppercase">Curriculum</span>
+        </div>
+        <div
+          class="group flex cursor-pointer items-center gap-4 pl-4 text-slate-500 transition-colors hover:bg-slate-900/50">
+          <span class="material-symbols-outlined text-sm">menu_book</span>
+          <span class="font-mono text-xs tracking-widest uppercase">Portfolio</span>
+        </div>
+        <div
+          class="group flex cursor-pointer items-center gap-4 pl-4 text-slate-500 transition-colors hover:bg-slate-900/50">
+          <span class="material-symbols-outlined text-sm">article</span>
+          <span class="font-mono text-xs tracking-widest uppercase">Journal</span>
+        </div>
+        <div
+          class="group flex cursor-pointer items-center gap-4 pl-4 text-slate-500 transition-colors hover:bg-slate-900/50">
+          <span class="material-symbols-outlined text-sm">alternate_email</span>
+          <span class="font-mono text-xs tracking-widest uppercase">Contact</span>
+        </div>
+      </nav>
+      <div class="mt-auto">
+        <button
+          class="w-full bg-white py-3 font-mono text-[10px] font-bold tracking-[0.2em] text-black transition-colors hover:bg-slate-200 active:scale-95">
+          DOWNLOAD CV
+        </button>
+      </div>
+    </aside>
+    <!-- Predicted TopNavBar Implementation -->
+    <header
+      class="sticky top-0 z-50 ml-64 flex w-full max-w-[calc(100%-16rem)] items-center justify-between border-b border-slate-800/20 bg-[#0A0A0A]/80 px-8 py-4 backdrop-blur-xl">
+      <div class="font-mono text-lg tracking-widest text-slate-50 uppercase">THE_ARCHIVE_v1.0</div>
+      <div class="flex items-center gap-8">
+        <nav class="flex gap-6 font-mono text-[10px] tracking-widest">
+          <a class="text-slate-500 uppercase transition-opacity hover:text-slate-300" href="#">ARCHIVE</a>
+          <a class="text-slate-50 uppercase underline decoration-1 underline-offset-8" href="#">INDEX</a>
+          <a class="text-slate-500 uppercase transition-opacity hover:text-slate-300" href="#">ABOUT</a>
+        </nav>
+        <div class="flex items-center gap-4 border-l border-slate-800/40 pl-6 text-slate-50">
+          <span
+            class="material-symbols-outlined hover:text-primary cursor-pointer text-lg transition-colors"
+            data-icon="grid_view"
+            >grid_view</span
+          >
+          <span
+            class="material-symbols-outlined hover:text-primary cursor-pointer text-lg transition-colors"
+            data-icon="dark_mode"
+            >dark_mode</span
+          >
+        </div>
+      </div>
+    </header>
+    <main class="ml-64 min-h-screen w-[calc(100%-16rem)]">
+      <div class="flex min-h-screen flex-col lg:flex-row">
+        <!-- Left Column: Sticky Profile Sidebar -->
+        <section
+          class="border-outline-variant/20 flex flex-col items-center border-r p-12 lg:sticky lg:top-20 lg:h-[calc(100vh-80px)] lg:w-[30%]">
+          <div
+            class="bg-surface-container-low border-outline-variant/30 relative mb-12 flex aspect-square w-full items-center justify-center border">
+            <!-- Minimalist Avatar Placeholder -->
+            <div class="pointer-events-none absolute inset-0 flex items-center justify-center">
+              <div class="bg-outline-variant/20 h-px w-full rotate-45"></div>
+              <div class="bg-outline-variant/20 h-px w-full -rotate-45"></div>
+            </div>
+            <img
+              alt="Darshil Kadiwala Portrait"
+              class="h-full w-full object-cover opacity-80 mix-blend-luminosity grayscale"
+              data-alt="Moody monochromatic studio portrait of a man with minimalist high-fashion lighting and sharp architectural shadows background"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgfL53cJ-YJeaBkDTBIvsL5o7cuy5eWWwOJzc5DgbWJv57RzzIAvd-tEBf1cVgOacjkvvTWvip3lR-Z3XyVsFTYyPKrm1uSS-Ctoe6eAPmF8vjQDMjlNALZm6U3lW3g4jxXGbZP5nph0npnacI5SHAdzsVXQ-Hx44EfZr40fRMYOJuFwoR6fll-NJrxhxIhv8x8aEW1N7e0856b3oHoJxQC9z5E_BOVznUVWGN4YwlpFmlGXR8LHn10cXmzl9LqsePfOdL3s5obzEh" />
+          </div>
+          <div class="relative mb-12 flex h-96 w-full items-center justify-center overflow-hidden">
+            <h1
+              class="serif-display text-on-surface-variant/20 absolute origin-center rotate-90 text-7xl font-extrabold tracking-tighter whitespace-nowrap">
+              DARSHIL KADIWALA
+            </h1>
+          </div>
+          <div class="w-full space-y-8">
+            <p class="text-on-surface-variant max-w-xs text-sm leading-relaxed font-light tracking-tight uppercase">
+              Architecting high-frequency data visualizations and decentralized financial networks. Focused on sub-100ms
+              latency and rigorous grid alignment.
+            </p>
+            <div class="bg-surface-container-lowest border-outline-variant/30 flex items-center gap-4 border p-4">
+              <div class="pulse-green h-2 w-2 rounded-full bg-green-500"></div>
+              <span class="mono-metadata text-[10px] uppercase">Currently at [STITCH]</span>
+            </div>
+            <div class="flex gap-2">
+              <a
+                class="border-outline-variant/30 hover:bg-surface-container-high flex h-10 w-10 items-center justify-center border transition-colors"
+                href="#">
+                <span class="material-symbols-outlined text-sm">code</span>
+              </a>
+              <a
+                class="border-outline-variant/30 hover:bg-surface-container-high flex h-10 w-10 items-center justify-center border transition-colors"
+                href="#">
+                <span class="material-symbols-outlined text-sm">terminal</span>
+              </a>
+              <a
+                class="border-outline-variant/30 hover:bg-surface-container-high flex h-10 w-10 items-center justify-center border transition-colors"
+                href="#">
+                <span class="material-symbols-outlined text-sm">share</span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- Right Column: Main Content -->
+        <section class="space-y-24 p-12 lg:w-[70%] lg:p-24">
+          <!-- Experience Section -->
+          <div>
+            <div class="mb-12 flex items-center gap-4">
+              <span class="mono-metadata text-outline text-xs tracking-[0.3em] uppercase">Section_01</span>
+              <h2 class="mono-metadata text-xs font-bold tracking-[0.3em] uppercase">EXPERIENCE</h2>
+              <div class="bg-outline-variant/20 h-px flex-1"></div>
+            </div>
+            <div class="space-y-1">
+              <!-- Entry 01 -->
+              <div
+                class="group border-outline-variant/10 hover:bg-surface-container-low grid grid-cols-1 border-b px-6 py-12 transition-colors duration-500 md:grid-cols-4">
+                <div class="mono-metadata text-outline mb-4 text-[10px] md:mb-0">2022 — PRESENT</div>
+                <div class="space-y-6 md:col-span-3">
+                  <div>
+                    <h3 class="serif-display mb-2 text-4xl font-medium tracking-tight">QUANTUM_INTERFACE</h3>
+                    <p class="mono-metadata text-outline text-xs uppercase">Lead Systems Architect</p>
+                  </div>
+                  <ul class="text-on-surface-variant list-none space-y-3 text-sm font-light">
+                    <li class="flex items-start gap-3">
+                      <span class="text-outline bg-outline-variant mt-1.5 block h-1 w-1"></span>
+                      Engineered real-time liquidity visualization engine processing 50k+ transactions/sec.
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="text-outline bg-outline-variant mt-1.5 block h-1 w-1"></span>
+                      Implemented zero-latency rendering pipelines using WebAssembly and Rust integrations.
+                    </li>
+                  </ul>
+                  <div class="flex flex-wrap gap-2 pt-4">
+                    <span
+                      class="border-outline-variant/30 mono-metadata border px-3 py-1 text-[9px] tracking-wider uppercase"
+                      >REACT</span
+                    >
+                    <span
+                      class="border-outline-variant/30 mono-metadata border px-3 py-1 text-[9px] tracking-wider uppercase"
+                      >RUST</span
+                    >
+                    <span
+                      class="border-outline-variant/30 mono-metadata border px-3 py-1 text-[9px] tracking-wider uppercase"
+                      >WASM</span
+                    >
+                    <span
+                      class="border-outline-variant/30 mono-metadata border px-3 py-1 text-[9px] tracking-wider uppercase"
+                      >TYPESCRIPT</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- Entry 02 -->
+              <div
+                class="group border-outline-variant/10 hover:bg-surface-container-low grid grid-cols-1 border-b px-6 py-12 transition-colors duration-500 md:grid-cols-4">
+                <div class="mono-metadata text-outline mb-4 text-[10px] md:mb-0">2020 — 2022</div>
+                <div class="space-y-6 md:col-span-3">
+                  <div>
+                    <h3 class="serif-display mb-2 text-4xl font-medium tracking-tight">NEURAL_GRID_v4</h3>
+                    <p class="mono-metadata text-outline text-xs uppercase">Senior Frontend Engineer</p>
+                  </div>
+                  <ul class="text-on-surface-variant list-none space-y-3 text-sm font-light">
+                    <li class="flex items-start gap-3">
+                      <span class="text-outline bg-outline-variant mt-1.5 block h-1 w-1"></span>
+                      Optimized high-frequency trading dashboards reducing frame-drop by 40%.
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="text-outline bg-outline-variant mt-1.5 block h-1 w-1"></span>
+                      Designed a custom design system token architecture for multi-tenant SaaS products.
+                    </li>
+                  </ul>
+                  <div class="flex flex-wrap gap-2 pt-4">
+                    <span
+                      class="border-outline-variant/30 mono-metadata border px-3 py-1 text-[9px] tracking-wider uppercase"
+                      >NEXT.JS</span
+                    >
+                    <span
+                      class="border-outline-variant/30 mono-metadata border px-3 py-1 text-[9px] tracking-wider uppercase"
+                      >D3.JS</span
+                    >
+                    <span
+                      class="border-outline-variant/30 mono-metadata border px-3 py-1 text-[9px] tracking-wider uppercase"
+                      >NODE.JS</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- Entry 03 -->
+              <div
+                class="group border-outline-variant/10 hover:bg-surface-container-low grid grid-cols-1 border-b px-6 py-12 transition-colors duration-500 md:grid-cols-4">
+                <div class="mono-metadata text-outline mb-4 text-[10px] md:mb-0">2018 — 2020</div>
+                <div class="space-y-6 md:col-span-3">
+                  <div>
+                    <h3 class="serif-display mb-2 text-4xl font-medium tracking-tight">PROTOCOL_LABS</h3>
+                    <p class="mono-metadata text-outline text-xs uppercase">Core Contributor</p>
+                  </div>
+                  <ul class="text-on-surface-variant list-none space-y-3 text-sm font-light">
+                    <li class="flex items-start gap-3">
+                      <span class="text-outline bg-outline-variant mt-1.5 block h-1 w-1"></span>
+                      Architected P2P networking layers for decentralized storage solutions.
+                    </li>
+                  </ul>
+                  <div class="flex flex-wrap gap-2 pt-4">
+                    <span
+                      class="border-outline-variant/30 mono-metadata border px-3 py-1 text-[9px] tracking-wider uppercase"
+                      >GO</span
+                    >
+                    <span
+                      class="border-outline-variant/30 mono-metadata border px-3 py-1 text-[9px] tracking-wider uppercase"
+                      >IPFS</span
+                    >
+                    <span
+                      class="border-outline-variant/30 mono-metadata border px-3 py-1 text-[9px] tracking-wider uppercase"
+                      >LIBP2P</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Skills Section -->
+          <div>
+            <div class="mb-12 flex items-center gap-4">
+              <span class="mono-metadata text-outline text-xs tracking-[0.3em] uppercase">Section_02</span>
+              <h2 class="mono-metadata text-xs font-bold tracking-[0.3em] uppercase">SKILLS</h2>
+              <div class="bg-outline-variant/20 h-px flex-1"></div>
+            </div>
+            <div
+              class="bg-outline-variant/20 border-outline-variant/20 grid grid-cols-1 gap-px border sm:grid-cols-2 lg:grid-cols-4">
+              <div class="bg-surface space-y-6 p-8">
+                <h4 class="mono-metadata text-outline text-[10px] font-bold uppercase">LANGUAGES</h4>
+                <div class="space-y-2">
+                  <p class="text-sm font-medium tracking-tight uppercase">TypeScript</p>
+                  <p class="text-sm font-medium tracking-tight uppercase">Rust</p>
+                  <p class="text-sm font-medium tracking-tight uppercase">Go</p>
+                  <p class="text-sm font-medium tracking-tight uppercase">C++</p>
+                </div>
+              </div>
+              <div class="bg-surface space-y-6 p-8">
+                <h4 class="mono-metadata text-outline text-[10px] font-bold uppercase">FRAMEWORKS</h4>
+                <div class="space-y-2">
+                  <p class="text-sm font-medium tracking-tight uppercase">React / Next.js</p>
+                  <p class="text-sm font-medium tracking-tight uppercase">Tauri</p>
+                  <p class="text-sm font-medium tracking-tight uppercase">Express</p>
+                  <p class="text-sm font-medium tracking-tight uppercase">D3.js</p>
+                </div>
+              </div>
+              <div class="bg-surface space-y-6 p-8">
+                <h4 class="mono-metadata text-outline text-[10px] font-bold uppercase">TOOLS</h4>
+                <div class="space-y-2">
+                  <p class="text-sm font-medium tracking-tight uppercase">PostgreSQL</p>
+                  <p class="text-sm font-medium tracking-tight uppercase">Redis</p>
+                  <p class="text-sm font-medium tracking-tight uppercase">Docker</p>
+                  <p class="text-sm font-medium tracking-tight uppercase">Kubernetes</p>
+                </div>
+              </div>
+              <div class="bg-surface space-y-6 p-8">
+                <h4 class="mono-metadata text-outline text-[10px] font-bold uppercase">CLOUD</h4>
+                <div class="space-y-2">
+                  <p class="text-sm font-medium tracking-tight uppercase">AWS</p>
+                  <p class="text-sm font-medium tracking-tight uppercase">GCP</p>
+                  <p class="text-sm font-medium tracking-tight uppercase">Terraform</p>
+                  <p class="text-sm font-medium tracking-tight uppercase">Cloudflare</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- Predicted Footer Implementation -->
+    <footer
+      class="ml-64 flex w-[calc(100%-16rem)] items-center justify-between border-t border-slate-800/10 bg-[#0e0e0e] px-12 py-12">
+      <p class="font-mono text-[10px] tracking-widest text-slate-500 uppercase">
+        © 2024 MANIFESTO_STUDIO. ALL RIGHTS RESERVED.
+      </p>
+      <div class="flex gap-8">
+        <a
+          class="font-mono text-[10px] tracking-widest text-slate-600 uppercase transition-colors hover:text-slate-200"
+          href="#"
+          >IMPRINT</a
+        >
+        <a
+          class="font-mono text-[10px] tracking-widest text-slate-600 uppercase transition-colors hover:text-slate-200"
+          href="#"
+          >PRIVACY</a
+        >
+        <a
+          class="font-mono text-[10px] tracking-widest text-slate-600 uppercase transition-colors hover:text-slate-200"
+          href="#"
+          >SOURCE</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

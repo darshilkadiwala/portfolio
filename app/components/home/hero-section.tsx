@@ -14,7 +14,7 @@ export function HeroSection() {
   const cfg = siteConfig.home;
 
   return (
-    <section className='mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 py-8 md:px-8 md:py-16 lg:grid-cols-12 lg:px-12'>
+    <section className='min-h-hero-fold mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 py-8 md:px-8 md:py-16 lg:grid-cols-12 lg:px-12'>
       {/* Left col */}
       <div className='flex flex-col items-start gap-6 lg:col-span-7'>
         {/* Availability badge */}
@@ -25,9 +25,9 @@ export function HeroSection() {
 
         {/* Name */}
         <h1 className='font-heading text-foreground text-fluid-hero leading-[0.9] font-black tracking-tighter'>
-          {personal.name.split(' ')[0]}
+          {cfg.heroTitle.split(' ').slice(0, 2).join(' ')}
           <br />
-          {personal.name.split(' ').slice(1).join(' ')}
+          {cfg.heroTitle.split(' ').slice(2).join(' ')}
         </h1>
 
         {/* Role */}
@@ -37,7 +37,9 @@ export function HeroSection() {
         </div>
 
         {/* Bio */}
-        <p className='text-muted-foreground max-w-xl text-base font-light md:text-lg/relaxed'>{cfg.heroBio}</p>
+        <p className='text-muted-foreground max-w-xl text-base font-light text-balance md:text-lg/relaxed'>
+          {cfg.heroBio}
+        </p>
 
         {/* Tech stack */}
         <div className='flex flex-wrap gap-2'>
@@ -72,7 +74,7 @@ export function HeroSection() {
       </div>
 
       {/* Right col — hero image */}
-      <div className='relative mx-auto mt-8 w-full max-w-sm p-4 sm:max-w-md md:p-5 lg:col-span-5 lg:mx-0 lg:mt-0 lg:max-w-none'>
+      <div className='relative mx-auto mt-8 hidden w-full max-w-sm p-4 sm:max-w-md md:p-5 lg:col-span-5 lg:mx-0 lg:mt-0 lg:inline-block lg:max-w-none'>
         <div className='bg-muted flex aspect-square w-full items-center justify-center overflow-hidden'>
           <img
             src={personal.photo}

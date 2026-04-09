@@ -1,0 +1,306 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'surface-container-highest': '#252626',
+              'on-tertiary-container': '#1f6060',
+              'inverse-on-surface': '#565554',
+              'surface-container-high': '#1f2020',
+              outline: '#767575',
+              'primary-container': '#454747',
+              'tertiary-fixed': '#b8f6f5',
+              'on-primary-container': '#d0d0d0',
+              'on-primary-fixed-variant': '#5a5c5c',
+              tertiary: '#e2fffe',
+              'on-tertiary': '#2a6868',
+              'surface-dim': '#0e0e0e',
+              'secondary-container': '#004343',
+              'on-secondary-container': '#55d1d1',
+              'on-primary': '#3f4041',
+              'on-secondary-fixed-variant': '#006666',
+              'surface-container-lowest': '#000000',
+              'surface-container': '#191a1a',
+              'outline-variant': '#484848',
+              'secondary-fixed': '#7df5f5',
+              surface: '#0e0e0e',
+              'on-error-container': '#ff9993',
+              'on-tertiary-fixed': '#004d4d',
+              'primary-fixed': '#e2e2e2',
+              'surface-tint': '#c6c6c6',
+              'error-dim': '#bb5551',
+              primary: '#c6c6c6',
+              'on-tertiary-fixed-variant': '#2c6a6a',
+              'inverse-primary': '#5e5f5f',
+              'surface-bright': '#2c2c2c',
+              error: '#ee7d77',
+              'tertiary-container': '#b8f6f5',
+              'tertiary-dim': '#aae8e7',
+              'on-background': '#e7e5e4',
+              'on-secondary': '#002525',
+              'inverse-surface': '#fcf8f8',
+              'surface-container-low': '#131313',
+              'error-container': '#7f2927',
+              secondary: '#24afaf',
+              'on-primary-fixed': '#3e4040',
+              'secondary-dim': '#24afaf',
+              'surface-variant': '#252626',
+              'on-secondary-fixed': '#004747',
+              'on-error': '#490106',
+              background: '#0e0e0e',
+              'tertiary-fixed-dim': '#aae8e7',
+              'on-surface-variant': '#acabaa',
+              'primary-fixed-dim': '#d4d4d4',
+              'on-surface': '#e7e5e4',
+              'primary-dim': '#b8b9b9',
+              'secondary-fixed-dim': '#6de7e6',
+            },
+            borderRadius: {
+              DEFAULT: '0px',
+              lg: '0px',
+              xl: '0px',
+              full: '9999px',
+            },
+            fontFamily: {
+              headline: ['Space Grotesk'],
+              body: ['Space Grotesk'],
+              label: ['Space Grotesk'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 300,
+          'GRAD' 0,
+          'opsz' 24;
+        font-size: 20px;
+      }
+      .glow-bg {
+        background: radial-gradient(circle at center, rgba(36, 175, 175, 0.08) 0%, rgba(14, 14, 14, 0) 70%);
+      }
+      .wireframe-img {
+        background: repeating-linear-gradient(45deg, #1f2020, #1f2020 10px, #191a1a 10px, #191a1a 20px);
+      }
+    </style>
+  </head>
+  <body class="bg-surface font-body text-on-surface selection:bg-secondary selection:text-on-secondary">
+    <!-- TopAppBar Navigation Shell -->
+    <nav
+      class="fixed top-0 z-50 flex h-16 w-full items-center justify-between border-b border-neutral-800/50 bg-neutral-950/80 px-8 backdrop-blur-md">
+      <div class="font-['Space_Grotesk'] text-xl font-black tracking-tighter text-white uppercase">PORTFOLIO_OS</div>
+      <div class="hidden items-center gap-8 md:flex">
+        <a
+          class="font-['Space_Grotesk'] font-bold tracking-tight text-neutral-400 uppercase transition-all duration-300 hover:text-cyan-400"
+          href="#"
+          >WORK</a
+        >
+        <a
+          class="font-['Space_Grotesk'] font-bold tracking-tight text-neutral-400 uppercase transition-all duration-300 hover:text-cyan-400"
+          href="#"
+          >ARCHIVE</a
+        >
+        <a
+          class="border-b-2 border-cyan-400 pb-1 font-['Space_Grotesk'] font-bold tracking-tight text-cyan-400 uppercase"
+          href="#"
+          >CONTACT</a
+        >
+      </div>
+      <button
+        class="bg-secondary text-on-secondary hover:bg-secondary-dim px-6 py-2 font-['Space_Grotesk'] text-xs font-bold tracking-widest uppercase transition-colors">
+        RESUME
+      </button>
+    </nav>
+    <main class="pt-16">
+      <!-- Contact CTA Section -->
+      <section
+        class="glow-bg relative flex min-h-[819px] flex-col items-center justify-center overflow-hidden px-8 py-24">
+        <div class="mb-24 w-full max-w-6xl space-y-8 text-center">
+          <h1
+            class="font-headline text-6xl leading-none font-black tracking-tighter text-white uppercase md:text-8xl lg:text-[100px]">
+            LET'S BUILD <br />
+            SOMETHING.
+          </h1>
+          <p class="text-on-surface-variant mx-auto max-w-xl text-lg font-light tracking-wide uppercase md:text-xl">
+            Open to full-time roles, contracts, and interesting collaborations
+          </p>
+        </div>
+        <!-- Option Cards Grid -->
+        <div class="grid w-full max-w-7xl grid-cols-1 gap-0 md:grid-cols-3">
+          <!-- Card 1: Email -->
+          <div
+            class="bg-surface-container-low border-secondary group hover:bg-surface-container-high border-t-2 p-10 transition-colors">
+            <div class="flex h-full flex-col space-y-6">
+              <span class="material-symbols-outlined text-secondary" data-icon="mail">mail</span>
+              <div class="space-y-1">
+                <h3 class="text-on-surface-variant text-xs font-bold tracking-widest uppercase">Email</h3>
+                <p class="text-xl font-medium text-white">hello@system.arch</p>
+              </div>
+              <div class="mt-auto pt-4">
+                <button
+                  class="text-secondary flex items-center gap-2 text-xs font-bold tracking-widest uppercase underline-offset-8 group-hover:underline">
+                  Copy to Clipboard
+                  <span class="material-symbols-outlined text-[14px]" data-icon="content_copy">content_copy</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2: Schedule -->
+          <div
+            class="bg-surface-container-low border-outline-variant group hover:bg-surface-container-high md:border-outline-variant/20 border-t-2 p-10 transition-colors md:border-l">
+            <div class="flex h-full flex-col space-y-6">
+              <span class="material-symbols-outlined text-on-surface-variant" data-icon="calendar_today"
+                >calendar_today</span
+              >
+              <div class="space-y-1">
+                <h3 class="text-on-surface-variant text-xs font-bold tracking-widest uppercase">Availability</h3>
+                <p class="text-xl font-medium text-white">Schedule a Call</p>
+              </div>
+              <div class="mt-auto pt-4">
+                <a
+                  class="group-hover:text-secondary flex items-center gap-2 text-xs font-bold tracking-widest text-white uppercase transition-colors"
+                  href="#">
+                  Book 30 min
+                  <span class="material-symbols-outlined text-[14px]" data-icon="arrow_forward">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3: Socials -->
+          <div
+            class="bg-surface-container-low border-outline-variant group hover:bg-surface-container-high md:border-outline-variant/20 border-t-2 p-10 transition-colors md:border-l">
+            <div class="flex h-full flex-col space-y-6">
+              <div class="flex gap-4">
+                <span class="material-symbols-outlined text-on-surface-variant" data-icon="database">database</span>
+                <span class="material-symbols-outlined text-on-surface-variant" data-icon="person">person</span>
+              </div>
+              <div class="space-y-1">
+                <h3 class="text-on-surface-variant text-xs font-bold tracking-widest uppercase">Social</h3>
+                <p class="text-xl font-medium text-white">LinkedIn / GitHub</p>
+              </div>
+              <div class="mt-auto flex gap-6 pt-4">
+                <a
+                  class="text-on-surface-variant hover:text-secondary text-xs font-bold tracking-widest uppercase transition-colors"
+                  href="#"
+                  >GH_LINK</a
+                >
+                <a
+                  class="text-on-surface-variant hover:text-secondary text-xs font-bold tracking-widest uppercase transition-colors"
+                  href="#"
+                  >LI_LINK</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Divider -->
+      <div class="mx-auto max-w-7xl px-8">
+        <div class="bg-outline-variant/30 h-px w-full"></div>
+      </div>
+      <!-- Footer Section -->
+      <footer class="w-full border-t border-neutral-800 bg-neutral-900 py-24">
+        <div class="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-8 md:grid-cols-3">
+          <!-- Left: Branding -->
+          <div class="space-y-4">
+            <div class="font-['Space_Grotesk'] text-2xl font-black tracking-tighter text-white uppercase">DK</div>
+            <p
+              class="max-w-[200px] font-['Space_Grotesk'] text-xs leading-relaxed tracking-widest text-neutral-500 uppercase">
+              Building with intention. Architecting experiences through code and layout.
+            </p>
+          </div>
+          <!-- Center: Navigation Links -->
+          <div class="grid grid-cols-2 gap-y-4">
+            <a
+              class="font-['Space_Grotesk'] text-xs tracking-widest text-neutral-500 uppercase decoration-2 underline-offset-8 transition-all hover:text-cyan-400 hover:underline"
+              href="#"
+              >WORK</a
+            >
+            <a
+              class="font-['Space_Grotesk'] text-xs tracking-widest text-neutral-500 uppercase decoration-2 underline-offset-8 transition-all hover:text-cyan-400 hover:underline"
+              href="#"
+              >BLOG</a
+            >
+            <a
+              class="font-['Space_Grotesk'] text-xs tracking-widest text-neutral-500 uppercase decoration-2 underline-offset-8 transition-all hover:text-cyan-400 hover:underline"
+              href="#"
+              >WRITING</a
+            >
+            <a class="font-['Space_Grotesk'] text-xs tracking-widest text-cyan-400 uppercase transition-all" href="#"
+              >CONTACT</a
+            >
+            <a
+              class="font-['Space_Grotesk'] text-xs tracking-widest text-neutral-500 uppercase decoration-2 underline-offset-8 transition-all hover:text-cyan-400 hover:underline"
+              href="#"
+              >SKILLS</a
+            >
+            <a
+              class="font-['Space_Grotesk'] text-xs tracking-widest text-neutral-500 uppercase decoration-2 underline-offset-8 transition-all hover:text-cyan-400 hover:underline"
+              href="#"
+              >RESUME</a
+            >
+          </div>
+          <!-- Right: Meta Info -->
+          <div class="flex flex-col items-end justify-between space-y-8 text-right">
+            <div class="space-y-2">
+              <p class="font-['Space_Grotesk'] text-xs tracking-widest text-neutral-400 uppercase">2024 VERSION 1.0</p>
+              <p class="font-['Space_Grotesk'] text-[10px] tracking-widest text-neutral-500 uppercase">
+                Handcrafted with React + TypeScript
+              </p>
+            </div>
+            <a class="group flex items-center gap-2" href="#">
+              <span
+                class="text-[10px] font-bold tracking-widest text-neutral-500 uppercase transition-colors group-hover:text-white"
+                >Repository</span
+              >
+              <span
+                class="material-symbols-outlined group-hover:text-secondary text-[16px] text-neutral-500"
+                data-icon="terminal"
+                >terminal</span
+              >
+            </a>
+          </div>
+        </div>
+        <!-- Bottom Micro-Bar -->
+        <div class="mx-auto mt-24 max-w-7xl px-8">
+          <div class="flex flex-col items-center justify-between gap-4 border-t border-neutral-800/50 pt-8 md:flex-row">
+            <p class="font-['Space_Grotesk'] text-[10px] tracking-[0.2em] text-neutral-500 uppercase">
+              ©2024 SYSTEM_ARCHITECT. ALL RIGHTS RESERVED.
+            </p>
+            <div class="flex items-center gap-8">
+              <p class="font-['Space_Grotesk'] text-[10px] tracking-widest text-neutral-500 uppercase">
+                Built in India 🇮🇳
+              </p>
+              <div
+                class="bg-surface-container-high border-outline-variant/20 flex cursor-not-allowed items-center gap-3 border px-4 py-1 opacity-50">
+                <span class="material-symbols-outlined text-[14px]" data-icon="dark_mode">dark_mode</span>
+                <span class="font-['Space_Grotesk'] text-[9px] font-bold tracking-widest uppercase">Theme Locked</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <!-- FAB Suppression: On Contact screen, we suppress global actions for focus -->
+  </body>
+</html>

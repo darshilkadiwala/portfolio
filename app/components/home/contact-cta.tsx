@@ -1,7 +1,8 @@
+import { MoveRightIcon } from 'lucide-react';
 import { Link } from 'react-router';
 
 import { Button } from '@/components/ui/button/button';
-import { siteConfig } from '@/data/portfolio';
+import { personal, siteConfig } from '@/data/portfolio';
 
 export function ContactCTA() {
   const cfg = siteConfig.home;
@@ -26,8 +27,13 @@ export function ContactCTA() {
         </h2>
         <p className='text-muted-foreground mb-12 max-w-2xl text-lg font-light md:text-xl'>{cfg.contactSubheading}</p>
 
-        <Button asChild size='lg'>
-          <Link to='/contact'>{cfg.contactCTA}</Link>
+        <Button
+          asChild
+          size='lg'
+          className='h-auto px-4 py-1 text-base uppercase md:px-6 md:py-2 md:text-lg lg:px-8 lg:py-4 lg:text-xl'>
+          <Link to={personal.calendly}>
+            {cfg.contactCTA} <MoveRightIcon className='ms-3 size-4 md:size-5 lg:size-7' />
+          </Link>
         </Button>
       </div>
     </section>
