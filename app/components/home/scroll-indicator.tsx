@@ -2,7 +2,7 @@ import { siteConfig } from '@/data/portfolio';
 
 export function ScrollIndicator() {
   return (
-    <div className='flex justify-center py-20' aria-hidden='true'>
+    <div className='-mt-5 flex justify-center sm:-mt-10 md:-mt-32 md:py-20 lg:-mt-50' aria-hidden='true'>
       <div className='flex flex-col items-center gap-4'>
         <span className='text-muted-foreground font-mono text-[10px] font-bold tracking-[0.3em]'>
           {siteConfig.home.scrollLabel}

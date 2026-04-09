@@ -272,15 +272,16 @@ export const homeSkillCategories: HomeSkillCategory[] = [
 export const homeMission = {
   quote:
     '"Code is not just logic; it is the infrastructure of human experience. I build with structural integrity and aesthetic precision."',
-  location: 'Mumbai, India (UTC+5:30)',
-  currentSprint: 'Open for collaboration',
-  availability: 'High',
+  location: 'Location: India (UTC+5:30)',
+  currentSprint: "Current_Sprint: 'Open for collaboration'",
+  availability: 'Availability: High',
 } as const;
 
 // ─── UI Strings & Configuration ──────────────────────────────────────────────
 
 export const siteConfig = {
   home: {
+    heroTitle: `Hi 👋 I'm Darshil`,
     viewResume: 'View Resume',
     getInTouch: 'Get in touch',
     // Hero
@@ -303,7 +304,7 @@ export const siteConfig = {
     terminalTitle: 'DARSHIL_SHELL — 80x24',
     terminalPrompt: 'guest@portfolio:',
     terminalHome: '~',
-    terminalCmd1: 'npm run build:future',
+    terminalCmd1: '$ npm run build:future',
     terminalBuild: '> Building project modules...',
     terminalLogs: [
       '[OK] Initialized architecture system',
@@ -311,12 +312,12 @@ export const siteConfig = {
       '[OK] Optimized database indexing',
       '[OK] Hardened security protocols',
     ],
-    terminalCmd2: 'cat mission_statement.md',
+    terminalCmd2: '$ cat mission_statement.md',
     terminalDeployLabel: '# Active Deployment Details:',
     // About
     aboutSectionLabel: '01 /\nSTUDIO_LOGIC',
     aboutBio:
-      'I am an engineer focused on the intersection of performance and poetry. My approach is defined by the removal of the unnecessary to highlight the essential.',
+      'I am an engineer focused on the intersection of performance and poetry. \nMy approach is defined by the removal of the unnecessary to highlight the essential.',
     philosophyLabel: 'PHILOSOPHY',
     philosophyText:
       'I believe in the "Brutalist Blueprint"—where the function of a component determines its form. No decorative pixels, no hidden bloat. Just pure, executable intent.',
@@ -326,6 +327,17 @@ export const siteConfig = {
     // Experience
     experienceSectionLabel: '02 /\nTECHNICAL_ROOTS',
     capabilitiesLabel: 'CORE_CAPABILITIES',
+    technical: {
+      frontend: { label: 'Frontend_systems', skills: ['React.js', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Redux'] },
+      backend: {
+        label: 'Backend_systems',
+        skills: ['Node.js', 'Express.js', 'NestJS', 'PostgreSQL', 'MongoDB', 'MySQL'],
+      },
+      tools: {
+        label: 'Architectural_tools',
+        skills: ['Git', 'GitHub', 'BitBucket', 'Docker', 'AWS', 'TRELLO', 'JIRA'],
+      },
+    },
     historyLabel: 'HISTORY_LOGS',
     // Projects
     projectsSectionLabel: '03 /\nCONSTRUCTED_WORKS',
@@ -334,7 +346,7 @@ export const siteConfig = {
     contactSectionLabel: '04 /\nINITIATE_SESSION',
     contactSubheading:
       "Have a complex problem that requires a structural solution? Let's connect and build something resilient.",
-    contactCTA: 'OPEN_CHANNEL →',
+    contactCTA: 'Book a 30-min intro call',
   },
   resume: {
     downloadResume: 'Download Resume',
@@ -356,7 +368,7 @@ export const siteConfig = {
     emailCopiedToast: 'Email copied to your clipboard!',
     copyEmail: 'Copy email',
     dropMeAMessage: 'Prefer async? Drop me a message.',
-    bookACall: 'Book a 30-min intro call.',
+    bookACall: 'Book a 30-min intro call',
     emailLabel: 'Email',
     scheduleCallLabel: 'Schedule a call',
     followAlongLabel: 'Follow along',
@@ -364,7 +376,7 @@ export const siteConfig = {
   footer: {
     navigationHeading: 'Navigation',
     builtWithHeading: 'Built with',
-    builtWithTech: ['React Router 7', 'TypeScript', 'Tailwind CSS v4', 'shadcn/ui'],
+    builtWithTech: ['TypeScript', 'React', 'React Router 7', 'Tailwind CSS v4'],
     handcraftedIn: 'Handcrafted in',
     allRightsReserved: 'All rights reserved.',
     viewSource: 'View source',

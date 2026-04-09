@@ -20,7 +20,11 @@ export function AboutSection() {
 
       {/* Content */}
       <div className='flex flex-col gap-8 lg:col-span-8'>
-        <p className='text-foreground text-2xl/snug font-light tracking-tight md:text-3xl/snug'>{cfg.aboutBio}</p>
+        <div className='text-foreground space-y-4 font-mono text-2xl/snug font-light tracking-tight text-balance md:text-3xl/snug'>
+          {cfg.aboutBio.split('\n').map((line, index) => (
+            <p key={index}>{line}</p>
+          ))}
+        </div>
 
         <Separator />
 
@@ -29,13 +33,13 @@ export function AboutSection() {
             <h3 className='text-foreground font-mono text-xs font-bold tracking-widest uppercase'>
               {cfg.philosophyLabel}
             </h3>
-            <p className='text-muted-foreground text-sm/relaxed'>{cfg.philosophyText}</p>
+            <p className='text-muted-foreground text-sm/relaxed text-balance'>{cfg.philosophyText}</p>
           </div>
           <div className='flex flex-col gap-3'>
             <h3 className='text-foreground font-mono text-xs font-bold tracking-widest uppercase'>
               {cfg.methodologyLabel}
             </h3>
-            <p className='text-muted-foreground text-sm/relaxed'>{cfg.methodologyText}</p>
+            <p className='text-muted-foreground text-sm/relaxed text-balance'>{cfg.methodologyText}</p>
           </div>
         </div>
       </div>

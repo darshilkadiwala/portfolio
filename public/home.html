@@ -1,0 +1,515 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;family=JetBrains+Mono&amp;display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'secondary-fixed-dim': '#acabab',
+              'on-primary-container': '#ffffff',
+              'surface-container': '#eeeeee',
+              'on-tertiary': '#e3e2e2',
+              'surface-container-high': '#e8e8e8',
+              'inverse-surface': '#2f3131',
+              'surface-dim': '#dadada',
+              outline: '#777777',
+              'on-secondary-container': '#1b1c1c',
+              'secondary-fixed': '#c8c6c6',
+              'on-tertiary-fixed-variant': '#e3e2e2',
+              'inverse-on-surface': '#f1f1f1',
+              'on-surface': '#1a1c1c',
+              'tertiary-fixed-dim': '#464747',
+              'surface-container-highest': '#e2e2e2',
+              tertiary: '#3a3c3c',
+              'on-secondary-fixed': '#1b1c1c',
+              'on-error-container': '#410002',
+              'tertiary-fixed': '#5e5e5f',
+              surface: '#f9f9f9',
+              'inverse-primary': '#c6c6c6',
+              'surface-bright': '#f9f9f9',
+              'on-background': '#1a1c1c',
+              'error-container': '#ffdad6',
+              'on-tertiary-fixed': '#ffffff',
+              'on-primary-fixed-variant': '#e2e2e2',
+              secondary: '#5f5e5e',
+              'on-surface-variant': '#474747',
+              'on-primary-fixed': '#ffffff',
+              'surface-variant': '#e2e2e2',
+              'tertiary-container': '#747475',
+              background: '#f9f9f9',
+              'primary-container': '#3b3b3b',
+              'on-primary': '#e2e2e2',
+              error: '#ba1a1a',
+              primary: '#000000',
+              'outline-variant': '#c6c6c6',
+              'surface-container-low': '#f3f3f3',
+              'on-tertiary-container': '#ffffff',
+              'on-secondary-fixed-variant': '#3b3b3b',
+              'primary-fixed-dim': '#474747',
+              'surface-tint': '#5e5e5e',
+              'primary-fixed': '#5e5e5e',
+              'on-secondary': '#ffffff',
+              'surface-container-lowest': '#ffffff',
+              'secondary-container': '#d6d4d3',
+              'on-error': '#ffffff',
+            },
+            borderRadius: {
+              DEFAULT: '0px',
+              lg: '0px',
+              xl: '0px',
+              full: '9999px',
+            },
+            fontFamily: {
+              headline: ['Space Grotesk'],
+              body: ['Inter'],
+              label: ['Inter'],
+              mono: ['JetBrains Mono'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: 'Space_Grotesk', sans-serif;
+      }
+      .mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary">
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 left-0 z-50 flex w-full max-w-none items-center justify-between bg-[#f9f9f9] px-12 py-8 dark:bg-neutral-900">
+      <div
+        class="font-['Space_Grotesk'] text-2xl font-black tracking-tighter tracking-widest text-black uppercase dark:text-white">
+        ARCHITECT_OS
+      </div>
+      <div class="hidden gap-8 font-['Space_Grotesk'] tracking-tighter uppercase md:flex">
+        <a
+          class="border-b-2 border-black pb-1 text-black transition-colors duration-200 hover:text-black dark:border-white dark:text-white dark:hover:text-white"
+          href="#"
+          >HOME</a
+        >
+        <a
+          class="text-neutral-500 transition-colors duration-200 hover:text-black dark:text-neutral-400 dark:hover:text-white"
+          href="#projects"
+          >PROJECTS</a
+        >
+        <a
+          class="text-neutral-500 transition-colors duration-200 hover:text-black dark:text-neutral-400 dark:hover:text-white"
+          href="#experience"
+          >EXPERIENCE</a
+        >
+        <a
+          class="text-neutral-500 transition-colors duration-200 hover:text-black dark:text-neutral-400 dark:hover:text-white"
+          href="#about"
+          >ABOUT</a
+        >
+        <a
+          class="text-neutral-500 transition-colors duration-200 hover:text-black dark:text-neutral-400 dark:hover:text-white"
+          href="#contact"
+          >CONTACT</a
+        >
+      </div>
+      <div class="md:hidden">
+        <span class="material-symbols-outlined">menu</span>
+      </div>
+    </nav>
+    <main class="pt-32">
+      <!-- Hero Section -->
+      <section class="grid min-h-[819px] grid-cols-1 items-center gap-12 px-12 lg:grid-cols-12">
+        <div class="flex flex-col items-start lg:col-span-7">
+          <div
+            class="bg-secondary-container text-on-secondary-container mb-6 flex items-center gap-2 px-3 py-1 text-xs font-bold tracking-widest">
+            <span class="bg-primary h-2 w-2 animate-pulse"></span>
+            AVAILABLE FOR HIRE
+          </div>
+          <h1 class="mb-4 text-7xl leading-[0.9] font-black tracking-tighter md:text-9xl">Darshil<br />Kadiwala</h1>
+          <div class="mb-8 flex items-center gap-3">
+            <span class="mono text-outline text-2xl font-light">/</span>
+            <p class="mono text-primary text-2xl tracking-tight">
+              Full-Stack Architect<span class="animate-ping">|</span>
+            </p>
+          </div>
+          <p class="text-on-surface-variant mb-10 max-w-xl text-lg leading-relaxed font-light">
+            Building resilient digital infrastructure through intentional design and structural code. Specializing in
+            high-performance web applications and system logic.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-surface-container px-4 py-2 font-mono text-xs font-medium">TYPESCRIPT</span>
+            <span class="bg-surface-container px-4 py-2 font-mono text-xs font-medium">REACT.JS</span>
+            <span class="bg-surface-container px-4 py-2 font-mono text-xs font-medium">NODE.JS</span>
+            <span class="bg-surface-container px-4 py-2 font-mono text-xs font-medium">POSTGRESQL</span>
+            <span class="bg-surface-container px-4 py-2 font-mono text-xs font-medium">DOCKER</span>
+          </div>
+        </div>
+        <div class="relative mt-12 lg:col-span-5 lg:mt-0">
+          <div class="bg-surface-dim relative flex aspect-square w-full items-center justify-center overflow-hidden">
+            <img
+              class="h-full w-full object-cover opacity-80 mix-blend-multiply grayscale"
+              data-alt="Abstract 3D isometric architectural wireframe with glowing monochrome lines and dark geometric volumes"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2joHdEsM_ZYqe2A_9MuVVX69oYTSK4mh_WSfM_1ThwW4j6JYg9U4f6WfVvUdnAJSo2vizfvfy7uFajw-UGLdtRN6EOXnFZLg8yp6o3lgJbeSjJKfXaofANLWA5eBCMUGJPcm0hVkgP9vU-qBt80o3G7NqFGeKAqDHM7mAG27TZDN8oeJ_FUCNmX2yxlKEVw3IKPSXsI6RSlYrVLD3U2xKdYYpN3USKi-zHaK5w56rqhLXF9MUfE-mTM_PkTTXwZGIH7MVd_1TgwsO" />
+            <div class="border-surface absolute inset-0 border-[20px]"></div>
+            <!-- Blueprint Overlay Artifacts -->
+            <div class="bg-outline-variant absolute top-10 left-10 h-[1px] w-24"></div>
+            <div class="bg-outline-variant absolute top-10 left-10 h-24 w-[1px]"></div>
+          </div>
+          <!-- Offset Grid Element -->
+          <div class="bg-primary-container absolute -right-10 -bottom-10 -z-10 hidden h-48 w-48 xl:block"></div>
+        </div>
+      </section>
+      <!-- Scroll Indicator -->
+      <div class="flex justify-center py-20">
+        <div class="flex flex-col items-center gap-4">
+          <span class="text-outline text-[10px] font-bold tracking-[0.3em]">SCROLL_FOR_DATA</span>
+          <div class="from-primary h-24 w-[1px] bg-gradient-to-b to-transparent"></div>
+        </div>
+      </div>
+      <!-- Terminal Section -->
+      <section class="bg-surface-container-low px-12 py-24">
+        <div class="mx-auto max-w-6xl">
+          <div class="bg-primary overflow-hidden shadow-2xl">
+            <div class="bg-primary-container flex items-center justify-between px-4 py-3">
+              <div class="flex gap-2">
+                <div class="bg-on-primary-fixed-variant h-3 w-3"></div>
+                <div class="bg-on-primary-fixed-variant h-3 w-3"></div>
+                <div class="bg-on-primary-fixed-variant h-3 w-3"></div>
+              </div>
+              <div class="mono text-on-primary-fixed-variant text-[10px] tracking-widest opacity-50">
+                DARSHIL_SHELL — 80x24
+              </div>
+              <div class="w-12"></div>
+            </div>
+            <div class="mono text-on-primary no-scrollbar h-[400px] overflow-y-auto p-8 text-sm leading-relaxed">
+              <p class="mb-2">
+                <span class="text-secondary-fixed-dim">guest@portfolio:</span
+                ><span class="text-secondary-fixed">~</span>$ npm run build:future
+              </p>
+              <p class="text-secondary-fixed-dim mb-4">&gt; Building project modules...</p>
+              <p class="text-on-tertiary-fixed-variant mb-1">[OK] Initialized architecture system</p>
+              <p class="text-on-tertiary-fixed-variant mb-1">[OK] Compiled reactive interfaces</p>
+              <p class="text-on-tertiary-fixed-variant mb-1">[OK] Optimized database indexing</p>
+              <p class="text-on-tertiary-fixed-variant mb-4">[OK] Hardened security protocols</p>
+              <p class="mb-2">
+                <span class="text-secondary-fixed-dim">guest@portfolio:</span
+                ><span class="text-secondary-fixed">~</span>$ cat mission_statement.md
+              </p>
+              <p class="text-on-surface-variant bg-surface-container mb-4 inline-block px-2 italic">
+                "Code is not just logic; it is the infrastructure of human experience. I build with structural integrity
+                and aesthetic precision."
+              </p>
+              <p class="text-on-tertiary-fixed-variant mb-2"># Active Deployment Details:</p>
+              <p class="mb-1">Location: Mumbai, India (UTC+5:30)</p>
+              <p class="mb-1">Current_Sprint: 'Open for collaboration'</p>
+              <p class="mb-4">Availability: High</p>
+              <p class="mb-2 animate-pulse">
+                <span class="text-secondary-fixed-dim">guest@portfolio:</span
+                ><span class="text-secondary-fixed">~</span>$ _
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Section -->
+      <section class="grid grid-cols-1 gap-12 px-12 py-32 lg:grid-cols-12" id="about">
+        <div class="lg:col-span-4">
+          <h2 class="sticky top-40 text-5xl font-black tracking-tighter uppercase">01 /<br />STUDIO_LOGIC</h2>
+        </div>
+        <div class="space-y-8 lg:col-span-8">
+          <p class="text-3xl leading-snug font-light tracking-tight">
+            I am an engineer focused on the intersection of performance and poetry. My approach is defined by the
+            removal of the unnecessary to highlight the essential.
+          </p>
+          <div class="grid grid-cols-1 gap-12 pt-8 md:grid-cols-2">
+            <div class="space-y-4">
+              <h4 class="text-xs font-bold tracking-widest uppercase">PHILOSOPHY</h4>
+              <p class="text-on-surface-variant text-sm leading-relaxed">
+                I believe in the "Brutalist Blueprint"—where the function of a component determines its form. No
+                decorative pixels, no hidden bloat. Just pure, executable intent.
+              </p>
+            </div>
+            <div class="space-y-4">
+              <h4 class="text-xs font-bold tracking-widest uppercase">METHODOLOGY</h4>
+              <p class="text-on-surface-variant text-sm leading-relaxed">
+                Leveraging modern stack architectures to create seamless user journeys. My process starts with rigid
+                data modeling and ends with fluid, responsive interfaces.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Skills & Experience -->
+      <section class="bg-surface-container px-12 py-32" id="experience">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-12">
+          <div class="lg:col-span-4">
+            <h2 class="sticky top-40 text-5xl font-black tracking-tighter uppercase">02 /<br />TECHNICAL_ROOTS</h2>
+          </div>
+          <div class="space-y-24 lg:col-span-8">
+            <!-- Skills Grid -->
+            <div>
+              <h3 class="text-outline mb-12 text-xs font-bold tracking-[0.3em] uppercase">CORE_CAPABILITIES</h3>
+              <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+                <div class="bg-surface border-primary flex flex-col gap-4 border-l-4 p-6">
+                  <span class="material-symbols-outlined text-3xl">developer_mode_tv</span>
+                  <span class="mono text-[10px] font-bold">FRONTEND</span>
+                </div>
+                <div class="bg-surface border-primary flex flex-col gap-4 border-l-4 p-6">
+                  <span class="material-symbols-outlined text-3xl">database</span>
+                  <span class="mono text-[10px] font-bold">BACKEND</span>
+                </div>
+                <div class="bg-surface border-primary flex flex-col gap-4 border-l-4 p-6">
+                  <span class="material-symbols-outlined text-3xl">cloud_done</span>
+                  <span class="mono text-[10px] font-bold">DEVOPS</span>
+                </div>
+                <div class="bg-surface border-primary flex flex-col gap-4 border-l-4 p-6">
+                  <span class="material-symbols-outlined text-3xl">architecture</span>
+                  <span class="mono text-[10px] font-bold">SYSTEM_DESIGN</span>
+                </div>
+              </div>
+            </div>
+            <!-- Experience List -->
+            <div class="space-y-12">
+              <h3 class="text-outline mb-12 text-xs font-bold tracking-[0.3em] uppercase">HISTORY_LOGS</h3>
+              <div class="space-y-1">
+                <div
+                  class="group hover:bg-surface-container-highest -mx-4 flex flex-col items-start justify-between px-4 py-8 transition-colors md:flex-row md:items-center">
+                  <div>
+                    <h4 class="text-2xl font-bold tracking-tight">Senior Full-Stack Engineer</h4>
+                    <p class="text-outline mono mt-1 text-sm uppercase">Global Tech Solutions</p>
+                  </div>
+                  <div class="mt-4 text-right md:mt-0">
+                    <span class="mono text-xs font-bold">2021 — PRESENT</span>
+                  </div>
+                </div>
+                <div
+                  class="group hover:bg-surface-container-highest -mx-4 flex flex-col items-start justify-between px-4 py-8 transition-colors md:flex-row md:items-center">
+                  <div>
+                    <h4 class="text-2xl font-bold tracking-tight">Web Systems Architect</h4>
+                    <p class="text-outline mono mt-1 text-sm uppercase">Creative Flow Inc.</p>
+                  </div>
+                  <div class="mt-4 text-right md:mt-0">
+                    <span class="mono text-xs font-bold">2018 — 2021</span>
+                  </div>
+                </div>
+                <div
+                  class="group hover:bg-surface-container-highest -mx-4 flex flex-col items-start justify-between px-4 py-8 transition-colors md:flex-row md:items-center">
+                  <div>
+                    <h4 class="text-2xl font-bold tracking-tight">Junior Software Dev</h4>
+                    <p class="text-outline mono mt-1 text-sm uppercase">StartUp Labs</p>
+                  </div>
+                  <div class="mt-4 text-right md:mt-0">
+                    <span class="mono text-xs font-bold">2016 — 2018</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Projects Section -->
+      <section class="bg-surface px-12 py-32" id="projects">
+        <div class="mb-16 flex items-end justify-between">
+          <h2 class="text-5xl font-black tracking-tighter uppercase">03 /<br />CONSTRUCTED_WORKS</h2>
+          <div class="mono text-outline mb-2 text-xs">COUNT: 04 ACTIVE PROJECTS</div>
+        </div>
+        <div class="bg-outline-variant/20 grid grid-cols-1 gap-px md:grid-cols-2">
+          <!-- Project Card 1 -->
+          <div class="bg-surface group border-outline-variant/10 relative border p-10">
+            <div class="bg-surface-container-low mb-8 flex aspect-video items-center justify-center overflow-hidden">
+              <img
+                class="h-full w-full object-cover opacity-50 grayscale transition-all duration-500 group-hover:scale-105 group-hover:opacity-100"
+                data-alt="Monochromatic dashboard interface with complex data visualizations, sleek graphs, and minimalist typography"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmDe-1-OS-7DIk2CDuGuRzD281Mg-wHrh18h5xOiFbvIlv7PDmL8QjlvRYwuUnNmbuBQgUamRQIuuoWLM085_wDDTX6R2xaDk5mWNHZ-YcD3Zjp8fpugxCBrTp3bFZtDL-LC_14jiC24R-LjiTacURnarsbMeLitsoKLcDQySVi0UU1FsyrdIlnksd92r0IrSMFh5ep6_qog87pUi3OlMXVw9qRV_fQU6wo5ulqKpWYXd_v2EOxhsgjgdPQQcGMHm3mA_cCDfyHo5E" />
+            </div>
+            <span class="mono text-outline mb-2 block text-[10px]">V.01.2</span>
+            <h3 class="mb-4 text-3xl font-bold transition-transform duration-300 group-hover:translate-x-2">
+              Omni-Channel CRM
+            </h3>
+            <p class="text-on-surface-variant mb-8 max-w-sm text-sm leading-relaxed">
+              Enterprise-scale customer relationship management system built with Next.js and PostgreSQL. Features
+              real-time sync and predictive analytics.
+            </p>
+            <div class="flex gap-4">
+              <span class="material-symbols-outlined text-outline">arrow_outward</span>
+              <span class="mono hover:text-primary cursor-pointer text-[10px] font-bold tracking-widest uppercase"
+                >VIEW_CASE_STUDY</span
+              >
+            </div>
+          </div>
+          <!-- Project Card 2 -->
+          <div class="bg-surface group border-outline-variant/10 relative border p-10">
+            <div class="bg-surface-container-low mb-8 flex aspect-video items-center justify-center overflow-hidden">
+              <img
+                class="h-full w-full object-cover opacity-50 grayscale transition-all duration-500 group-hover:scale-105 group-hover:opacity-100"
+                data-alt="Abstract code visualizer showing 3D digital particles forming a structured cube, grayscale palette"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeH6h_oe9dypYTdwphPpXusg5fSR-fdr5s2tApFAzjVtctA69-MwoyFc-7xyi5IltQuF212WvAXnNc2koeFHTj_j-h4U2toewFPnqCY7GXCTATuhy1tElYz_02huTgYfEQwi68zlxk_DfafdG0tLYTMO-VJLYiQf8dlNK7oR1rUyr0Y46W7Xrn3jr3m20OfUw-KHzdykN554JUKnCoiZ5ZmQ1EySYBADxoQJWrWG6AqfVRjw65x_lQdFG7R8nshw3CNITbMArzAgk0" />
+            </div>
+            <span class="mono text-outline mb-2 block text-[10px]">V.04.5</span>
+            <h3 class="mb-4 text-3xl font-bold transition-transform duration-300 group-hover:translate-x-2">
+              Logic_Engine v4
+            </h3>
+            <p class="text-on-surface-variant mb-8 max-w-sm text-sm leading-relaxed">
+              A proprietary state management library designed for micro-frontend architectures. Zero dependencies,
+              maximum throughput.
+            </p>
+            <div class="flex gap-4">
+              <span class="material-symbols-outlined text-outline">arrow_outward</span>
+              <span class="mono hover:text-primary cursor-pointer text-[10px] font-bold tracking-widest uppercase"
+                >VIEW_DOCS</span
+              >
+            </div>
+          </div>
+          <!-- Project Card 3 -->
+          <div class="bg-surface group border-outline-variant/10 relative border p-10">
+            <div class="bg-surface-container-low mb-8 flex aspect-video items-center justify-center overflow-hidden">
+              <img
+                class="h-full w-full object-cover opacity-50 grayscale transition-all duration-500 group-hover:scale-105 group-hover:opacity-100"
+                data-alt="Minimalist smartphone mockups showing a banking app with dark mode interface and clean iconography"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCffExB1D6JMsw8Rse6LG804SMQrhJJK_60O51lYOB_KGHiHxe4aOnN5mIXYTtTaXfIuXaQB8RoE-00wasj5Vu8Y64w0Q9XPOZFr1KOfL4T2loYjVhADA7l0-pmGxNC61bTQPr6vCRjMtP7Hd9PRX180-F6oLm2jU6bvW7dZBNSpViETC11e3qFjwcwvYi8Phyq02US9tBMVduATzCPtA8WyQSezfNbNqzLrW9ylrSVHvzGwvEsIdpEFzN_N-D5ME1zZo4jUk-S3ljT" />
+            </div>
+            <span class="mono text-outline mb-2 block text-[10px]">V.02.0</span>
+            <h3 class="mb-4 text-3xl font-bold transition-transform duration-300 group-hover:translate-x-2">
+              Nova_Pay Mobile
+            </h3>
+            <p class="text-on-surface-variant mb-8 max-w-sm text-sm leading-relaxed">
+              Fintech application interface focused on rapid transactions and biometric security. Optimized for
+              low-latency networks.
+            </p>
+            <div class="flex gap-4">
+              <span class="material-symbols-outlined text-outline">arrow_outward</span>
+              <span class="mono hover:text-primary cursor-pointer text-[10px] font-bold tracking-widest uppercase"
+                >VIEW_FLOW</span
+              >
+            </div>
+          </div>
+          <!-- Project Card 4 -->
+          <div class="bg-surface group border-outline-variant/10 relative border p-10">
+            <div class="bg-surface-container-low mb-8 flex aspect-video items-center justify-center overflow-hidden">
+              <img
+                class="h-full w-full object-cover opacity-50 grayscale transition-all duration-500 group-hover:scale-105 group-hover:opacity-100"
+                data-alt="Brutalist architectural photo of concrete stairs with high contrast shadows and clean lines"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC67yk_XZX9qsSTtiSqmVHgozU2YR9fpl2dBLlluNQJRRzjEDK3OcFjxlcIu6KFcMthpR-iMKlKMuDYS5mhTVlxoiutjqVBSt4zX1UH4EqCx9QmLLVzpWIDeXPeDAXQkroWSCbKnLS6Z2mnGVIfhwQwVTtO5FffEnpOhZFbFww_XD-St7jgEbQ8ZtVGQDhCjhwgt_v6yoNtpQD2WM3lD-orgCkNsa7rBNlKe6f5Sh2gnuEaBPjYCvTPruuX2ED4XSaW3HVtQmKalXJt" />
+            </div>
+            <span class="mono text-outline mb-2 block text-[10px]">V.09.9</span>
+            <h3 class="mb-4 text-3xl font-bold transition-transform duration-300 group-hover:translate-x-2">
+              Structure_UI Kit
+            </h3>
+            <p class="text-on-surface-variant mb-8 max-w-sm text-sm leading-relaxed">
+              A headless UI component library built for rapid prototyping of high-fidelity architectural interfaces.
+            </p>
+            <div class="flex gap-4">
+              <span class="material-symbols-outlined text-outline">arrow_outward</span>
+              <span class="mono hover:text-primary cursor-pointer text-[10px] font-bold tracking-widest uppercase"
+                >VIEW_SOURCE</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section class="bg-surface-container-high relative overflow-hidden px-12 py-32" id="contact">
+        <!-- Background Decorative Element -->
+        <div class="absolute right-[-100px] bottom-[-50px] opacity-10">
+          <h2 class="text-[300px] leading-none font-black tracking-tighter select-none">CONTACT</h2>
+        </div>
+        <div class="relative z-10 max-w-4xl">
+          <h2 class="mb-6 text-5xl font-black tracking-tighter uppercase">04 /<br />INITIATE_SESSION</h2>
+          <p class="text-on-surface-variant mb-16 max-w-2xl text-xl font-light">
+            Have a complex problem that requires a structural solution? Let's connect and build something resilient.
+          </p>
+          <form class="bg-surface space-y-0">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+              <div class="border-outline-variant/20 border-r border-b p-8">
+                <label class="mono mb-4 block text-[10px] font-bold tracking-[0.2em]">INPUT_NAME</label>
+                <input
+                  class="placeholder:text-outline-variant w-full border-none bg-transparent p-0 text-xl font-bold focus:ring-0"
+                  placeholder="YOUR NAME"
+                  type="text" />
+              </div>
+              <div class="border-outline-variant/20 border-b p-8">
+                <label class="mono mb-4 block text-[10px] font-bold tracking-[0.2em]">INPUT_EMAIL</label>
+                <input
+                  class="placeholder:text-outline-variant w-full border-none bg-transparent p-0 text-xl font-bold focus:ring-0"
+                  placeholder="YOUR@EMAIL.COM"
+                  type="email" />
+              </div>
+            </div>
+            <div class="border-outline-variant/20 border-b p-8">
+              <label class="mono mb-4 block text-[10px] font-bold tracking-[0.2em]">INPUT_MESSAGE</label>
+              <textarea
+                class="placeholder:text-outline-variant w-full resize-none border-none bg-transparent p-0 text-xl font-bold focus:ring-0"
+                placeholder="DESCRIBE YOUR VISION..."
+                rows="4"></textarea>
+            </div>
+            <button
+              class="bg-primary text-on-primary-fixed hover:bg-primary-fixed flex w-full items-center justify-center gap-4 py-12 text-2xl font-black tracking-widest uppercase transition-colors"
+              type="submit">
+              SEND_MESSAGE
+              <span class="material-symbols-outlined">send</span>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="mt-24 flex w-full flex-col items-center justify-between bg-[#eeeeee] px-12 py-10 md:flex-row dark:bg-neutral-800">
+      <div class="font-['Inter'] text-xs font-medium tracking-tight text-black dark:text-white">
+        © 2024 STRUCTURAL LOGIC. ALL RIGHTS RESERVED.
+      </div>
+      <div class="mt-6 flex gap-8 font-['Inter'] text-xs font-medium tracking-tight md:mt-0">
+        <a
+          class="text-neutral-600 opacity-80 transition-opacity duration-200 hover:text-black hover:underline hover:opacity-100 dark:text-neutral-400 dark:hover:text-white"
+          href="#"
+          >TERMINAL</a
+        >
+        <a
+          class="text-neutral-600 opacity-80 transition-opacity duration-200 hover:text-black hover:underline hover:opacity-100 dark:text-neutral-400 dark:hover:text-white"
+          href="#"
+          >SOURCE</a
+        >
+        <a
+          class="font-bold text-neutral-600 underline opacity-80 transition-opacity duration-200 hover:text-black hover:underline hover:opacity-100 dark:text-neutral-400 dark:hover:text-white"
+          href="#"
+          >LOGS</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

@@ -23,7 +23,7 @@ export function SiteHeader() {
 
         {/* Nav */}
         <nav aria-label='Main navigation'>
-          <ul className='flex flex-wrap items-center gap-1'>
+          <ul className='hidden flex-wrap items-center gap-1 md:flex'>
             {navLinks.map(({ label, href }) => {
               const { pathname, hash } = location;
               let isActive = false;

@@ -2,9 +2,9 @@ import type { ReactNode } from 'react';
 
 import { CloudIcon, DatabaseIcon, LayoutGridIcon, MonitorIcon } from 'lucide-react';
 
-import { Card } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import type { HomeSkillCategory } from '@/data/portfolio';
-import { experience, homeSkillCategories, siteConfig } from '@/data/portfolio';
+import { experience, siteConfig } from '@/data/portfolio';
 
 // ─── Icon resolver (avoids a switch/case inline in JSX) ──────────────────────
 
@@ -34,30 +34,54 @@ export function ExperienceSection() {
           </h2>
         </div>
 
-        <div className='flex flex-col gap-16 md:gap-24 lg:col-span-8'>
+        <div className='flex flex-col gap-16 md:gap-16 lg:col-span-8'>
           {/* Capabilities grid */}
-          <div className='flex flex-col gap-8'>
+          <div className='flex flex-col gap-4'>
             <p className='text-muted-foreground font-mono text-xs font-bold tracking-[0.3em] uppercase'>
-              {cfg.capabilitiesLabel}
+              {cfg.technical.frontend.label}
             </p>
-            <div className='grid grid-cols-2 gap-4 md:grid-cols-4'>
-              {homeSkillCategories.map((skill) => (
-                <Card
-                  key={skill.id}
-                  className='border-primary flex flex-col gap-4 rounded-none border-0 border-l-4 p-6'>
-                  {SKILL_ICONS[skill.icon]}
-                  <span className='font-mono text-[10px] font-bold'>{skill.label}</span>
-                </Card>
+            {/* show skill badges */}
+            <div className='flex flex-wrap gap-2'>
+              {cfg.technical.frontend.skills.map((skill) => (
+                <Badge key={skill} className='font-mono uppercase' size='xl'>
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </div>
+          <div className='flex flex-col gap-4'>
+            <p className='text-muted-foreground font-mono text-xs font-bold tracking-[0.3em] uppercase'>
+              {cfg.technical.backend.label}
+            </p>
+            {/* show skill badges */}
+            <div className='flex flex-wrap gap-2'>
+              {cfg.technical.backend.skills.map((skill) => (
+                <Badge key={skill} className='font-mono uppercase' size='xl'>
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </div>
+          <div className='flex flex-col gap-4'>
+            <p className='text-muted-foreground font-mono text-xs font-bold tracking-[0.3em] uppercase'>
+              {cfg.technical.tools.label}
+            </p>
+            {/* show skill badges */}
+            <div className='flex flex-wrap gap-2'>
+              {cfg.technical.tools.skills.map((skill) => (
+                <Badge key={skill} className='font-mono uppercase' variant='outline' size='xl'>
+                  {skill}
+                </Badge>
               ))}
             </div>
           </div>
 
           {/* Experience timeline */}
-          <div className='flex flex-col gap-8'>
+          <div className='flex flex-col gap-4'>
             <p className='text-muted-foreground font-mono text-xs font-bold tracking-[0.3em] uppercase'>
               {cfg.historyLabel}
             </p>
-            <div className='flex flex-col gap-0'>
+            <div className='flex flex-col gap-0 border-s md:border-none'>
               {experience.map((entry, i) => (
                 <div
                   key={i}
