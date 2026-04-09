@@ -1,7 +1,10 @@
 import { Link, useLocation } from 'react-router';
 
+import { GitHubIcon, LinkedinIcon } from '@/components/icons';
 import { navLinks, personal } from '@/data/portfolio';
 import { cn } from '@/lib/utils';
+
+import { SocialIconLink } from './social-icon-link';
 
 export function SiteHeader() {
   const location = useLocation();
@@ -37,7 +40,7 @@ export function SiteHeader() {
                   <Link
                     to={href}
                     className={cn(
-                      'text-muted-foreground hover:text-foreground rounded-sm px-3 py-1.5 text-sm font-medium transition-colors',
+                      'text-muted-foreground hover:text-foreground rounded-sm px-3 py-1.5 font-mono text-sm font-medium transition-colors',
                       isActive && 'text-foreground',
                     )}>
                     {label}
@@ -45,6 +48,18 @@ export function SiteHeader() {
                 </li>
               );
             })}
+            <SocialIconLink
+              href={personal.github}
+              className='ms-2 lg:ms-3'
+              name='GitHub'
+              icon={<GitHubIcon className='size-5' />}
+            />
+            <SocialIconLink
+              href={personal.linkedin}
+              className='ms-2 lg:ms-3'
+              name='Linkedin'
+              icon={<LinkedinIcon className='size-5' />}
+            />
           </ul>
         </nav>
       </div>

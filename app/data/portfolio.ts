@@ -17,6 +17,7 @@ export const personal = {
   twitter: 'https://twitter.com/imthedarshil',
   calendly: 'https://calendly.com/darshil',
   github_username: 'darshilkadiwala',
+  handle: '@darshilkadiwala',
   resumeUrl: '/resume.pdf',
   resumeLastUpdated: 'April 2026',
   availability: 'online' as const,
@@ -37,6 +38,7 @@ export const personal = {
   twitter: string;
   calendly: string;
   github_username: string;
+  handle: string;
   resumeUrl: string;
   resumeLastUpdated: string;
   availability: 'online' | 'offline' | 'maintenance' | 'degraded';

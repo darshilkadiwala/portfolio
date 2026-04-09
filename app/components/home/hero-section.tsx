@@ -1,8 +1,11 @@
 import { FileTextIcon, MailIcon } from 'lucide-react';
 import { Link } from 'react-router';
 
+import { GitHubIcon, LinkedinIcon } from '@/components/icons';
+import { SocialIconLink } from '@/components/social-icon-link';
 import { Badge } from '@/components/ui/badge/badge';
 import { Button } from '@/components/ui/button/button';
+import { Separator } from '@/components/ui/separator';
 import { personal, siteConfig } from '@/data/portfolio';
 import { TypewriterStatus, useRolesTypewriter } from '@/hooks/use-roles-typewriter';
 import { cn } from '@/lib/utils';
@@ -59,6 +62,12 @@ export function HeroSection() {
               {cfg.getInTouch}
             </Link>
           </Button>
+        </div>
+        <div className='flex items-center gap-4 pt-1 md:gap-5'>
+          <SocialIconLink href={personal.github} name='GitHub' icon={<GitHubIcon className='size-5' />} />
+          <SocialIconLink href={personal.linkedin} name='Linkedin' icon={<LinkedinIcon className='size-5' />} />
+          <Separator orientation='vertical' />
+          <span className='text-muted-foreground font-mono text-xs'>{personal.handle}</span>
         </div>
       </div>
 
