@@ -5,6 +5,7 @@ import { Toaster } from 'sonner';
 
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
+import { TailwindIndicator } from '@/components/tailwind-indicator';
 import { TooltipProvider } from '@/components/ui/tooltip';
 
 import type { Route } from './+types/root';
@@ -27,6 +28,7 @@ export function Layout({ children }: { children: ReactNode }) {
           {children}
           <Toaster position='bottom-right' richColors theme='dark' />
           <SiteFooter />
+          <TailwindIndicator />
         </TooltipProvider>
         <ScrollRestoration />
         <Scripts />
